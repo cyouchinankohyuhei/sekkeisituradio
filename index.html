@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>設計室ラジオ | 空き家活用設計事務所</title>
+    <meta name="description" content="寄り添う、温かいラジオ。設計室ラジオは、あなたの想いに耳をすませ、これからの居場所をともに描く空き家活用の設計事務所です。">
+    <link rel="stylesheet" href="styles.css">
+    <!-- クールでモダンなゴシック体 + マテリアルシンボル -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-indicator">
+            <span class="material-symbols-rounded loading-icon">radio</span>
+            <p class="loading-text">周波数を合わせています<span class="dot-typing"></span></p>
+            <div class="loading-percentage" id="loading-percentage">0%</div>
+        </div>
+    </div>
+    <header class="header mdc-elevation-2">
+        <div class="logo"><a href="#">設計室ラジオ</a></div>
+        <nav>
+            <ul>
+                <li><a href="#concept" class="nav-link ripple">コンセプト</a></li>
+                <li><a href="#diagnosis" class="nav-link ripple">簡易診断</a></li>
+                <li><a href="#service" class="nav-link ripple">サービス</a></li>
+                <li><a href="#works" class="nav-link ripple">実績</a></li>
+                <li><a href="#profile" class="nav-link ripple">プロフィール</a></li>
+                <li><a href="#contact" class="nav-link ripple">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- メインビジュアル -->
+        <section id="hero" class="hero fade-in">
+            <div class="hero-image-container">
+                <img src="./assets/hero.png" alt="温かみのある空き家リノベーション" class="hero-image">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content mdc-elevation-3">
+                <h1 class="hero-title">寄り添う、温かいラジオ。<br><span class="hero-subtitle">自ら手を動かす「実動型」設計室。</span></h1>
+                <p class="hero-text">空き家に新しい周波数を合わせるように。<br class="pc-br">図面を描くだけでなく、実際の現場作業から小さなお困りごとの修繕まで。<br class="pc-br">あなたの想いに一貫して寄り添い、これからの心地よい居場所をともにつくります。</p>
+                <div class="mt-4">
+                    <a href="#diagnosis" class="btn btn-primary ripple">診断をはじめる</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- コンセプト -->
+        <section id="concept" class="section fade-in">
+            <div class="container">
+                <h2 class="section-subtitle">Concept</h2>
+                <h3 class="section-title">波長を合わせて、空間をチューニングする。</h3>
+                <div class="mdc-card concept-card mdc-elevation-1">
+                    <div style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        <p class="text-center" style="word-break: auto-phrase; text-wrap: balance; margin: 0;">
+                            設計室ラジオは、図面を描いて終えるだけの設計事務所ではありません。<br>
+                            自ら現場に立ち、手を動かして空き家を再生する「DIY実動型設計室」です。
+                        </p>
+                        <p class="text-center" style="word-break: auto-phrase; text-wrap: balance; margin: 0;">
+                            作業中、いつも傍らで流れているラジオのように。<br>
+                            決して主張しすぎず、でも常に寄り添い、<br>
+                            そこにあるだけで心地よい空間を作ってくれる。<br>
+                            私たちの空間づくりも、そんな自然で温かな存在でありたいと考えています。
+                        </p>
+                        <p class="text-center" style="word-break: auto-phrase; text-wrap: balance; margin: 0;">
+                            使われなくなった空き家から、住まいの小さなお困りごとの修繕まで。<br>
+                            あなたと建物の「ちょうどいい周波数」を探りながら、<br>
+                            居心地の良い場所を一緒につくりあげます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 簡易診断ツールへの動線 -->
+        <section id="diagnosis" class="section bg-light fade-in">
+            <div class="container">
+                <div class="mdc-card text-center mdc-elevation-2"
+                    style="padding: 4rem 2rem; max-width: 800px; margin: 0 auto;">
+                    <div class="icon-container mdc-elevation-1"
+                        style="background-color: var(--md-sys-color-primary); color: var(--md-sys-color-surface);">
+                        <span class="material-symbols-rounded">search_insights</span>
+                    </div>
+                    <h2 class="section-subtitle mt-4">Diagnosis</h2>
+                    <h3 class="section-title" style="margin-bottom: 1.5rem;">あなたの空き家、どう活かす？</h3>
+                    <p class="margin-bottom-lg" style="color: var(--md-sys-color-secondary);">
+                        いくつか質問に答えるだけで、あなたの空き家にぴったりな活用アイデアを提案します。</p>
+                    <div class="diagnosis-cta">
+                        <button class="btn btn-primary btn-large ripple" id="open-diagnosis-btn">
+                            <span class="material-symbols-rounded">quiz</span>
+                            簡易診断をはじめる
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス紹介 -->
+        <section id="service" class="section fade-in">
+            <div class="container">
+                <h2 class="section-subtitle">Service</h2>
+                <h3 class="section-title">提供していること</h3>
+                <div class="services-grid">
+                    <div class="mdc-card service-card ripple">
+                        <div class="icon-container mdc-elevation-1"><span class="material-symbols-rounded">radio</span>
+                        </div>
+                        <h4>空き家リノベーション設計</h4>
+                        <p>住宅、店舗、コミュニティスペースなど、建物の歴史を活かしながら現代のライフスタイルに合わせた空間を設計します。</p>
+                    </div>
+                    <div class="mdc-card service-card ripple">
+                        <div class="icon-container mdc-elevation-1"><span class="material-symbols-rounded">coffee</span>
+                        </div>
+                        <h4>活用企画・コンサルティング</h4>
+                        <p>「どう使えばいいかわからない」という段階からご相談ください。地域ニーズや予算に合わせた事業計画を一緒に考えます。</p>
+                    </div>
+                    <div class="mdc-card service-card ripple">
+                        <div class="icon-container mdc-elevation-1"><span
+                                class="material-symbols-rounded">potted_plant</span></div>
+                        <h4>補助金活用サポート</h4>
+                        <p>空き家活用に使える国や自治体の補助金・助成金の調査から申請サポートまで、伴走しながら行います。</p>
+                    </div>
+
+                    <!-- 便利屋サービス（ワイドカード） -->
+                    <div class="mdc-card service-card service-card-wide ripple" style="padding: 3rem;">
+                        <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem;">
+                            <div class="icon-container mdc-elevation-1"
+                                style="background-color: var(--md-sys-color-primary); color: var(--md-sys-color-surface);">
+                                <span class="material-symbols-rounded">plumbing</span></div>
+                            <div>
+                                <h4 style="margin-bottom: 0.5rem; font-size: 1.4rem;">住まいの便利屋・各種修繕</h4>
+                                <p style="margin: 0; color: var(--md-sys-color-secondary);">
+                                    有資格の専門工事から日常の「困った」まで、スピーディーに対応します。</p>
+                            </div>
+                        </div>
+                        <div class="handyman-accordion-list">
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>ガスコンロの入替・修理
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>10,000円〜20,000円</strong> <span
+                                            class="price-note">（※機器・部品代は別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>給湯器（石油・ガス）の取付・入替・修理
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>25,000円〜45,000円</strong> <span
+                                            class="price-note">（※機器代別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>暖房機（ファンヒーター、FF等）の取付・入替・修理
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>15,000円〜25,000円</strong> <span
+                                            class="price-note">（※機器代別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>エアコンの入替
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>15,000円〜25,000円</strong> <span
+                                            class="price-note">（標準工事の場合。機器代別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>水栓の交換・修理
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>8,000円〜15,000円</strong> <span
+                                            class="price-note">（※部品代別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>トイレの交換
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>25,000円〜40,000円</strong> <span
+                                            class="price-note">（内装工事を含まない場合。便器処分費等含む）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>照明器具の交換
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>3,000円〜8,000円</strong> <span
+                                            class="price-note">（※機器代別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>簡単な電気工事（コンセント移設・増設）
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>6,000円〜15,000円</strong></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>給水配管の修理
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>8,000円〜20,000円</strong> <span
+                                            class="price-note">（※状況・部品代により変動）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>家具の移動・解体・処分
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: 1時間あたり <strong>約3,000〜5,000円</strong> <span
+                                            class="price-note">（※処分費別途）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>庭木の剪定・枝切り
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: 1本 <strong>3,000円〜</strong> <span
+                                            class="price-note">（または半日15,000円ほど）</span></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>エアコンクリーニング
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: 1台 <strong>10,000円〜14,000円</strong></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion">
+                                <summary class="mdc-accordion-header ripple">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded">check</span>レンジフードの取付・入替・クリーニング
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate">作業料の目安: <strong>12,000円〜25,000円</strong></p>
+                                </div>
+                            </details>
+                            <details class="mdc-accordion"
+                                style="background-color: var(--md-sys-color-primary-container);">
+                                <summary class="mdc-accordion-header ripple" style="background-color: transparent;">
+                                    <div class="header-content">
+                                        <span class="material-symbols-rounded"
+                                            style="color: var(--md-sys-color-primary);">info</span>などなど...何でもご相談ください！
+                                    </div>
+                                    <span class="material-symbols-rounded expand-icon"
+                                        style="color: var(--md-sys-color-primary);">expand_more</span>
+                                </summary>
+                                <div class="mdc-accordion-body">
+                                    <p class="price-estimate" style="background-color: var(--md-sys-color-surface);">
+                                        <strong>現地調査・お見積もりは無料です！</strong> まずはお気軽にお問い合わせください。</p>
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新のプロジェクト (Works) -->
+        <section id="works" class="section fade-in">
+            <div class="container">
+                <h2 class="section-subtitle">Works</h2>
+                <h3 class="section-title">最新の空き家再生状況</h3>
+                <div class="mdc-card works-content mdc-elevation-2" style="padding: 0; background-color: var(--md-sys-color-surface-dim);">
+                    <video src="./assets/movie/0424.mp4" controls autoplay muted loop playsinline class="video-embed"></video>
+                </div>
+            </div>
+        </section>
+
+        <!-- プロフィール -->
+        <section id="profile" class="section bg-light fade-in">
+            <div class="container">
+                <h2 class="section-subtitle">Profile</h2>
+                <h3 class="section-title">設計室ラジオについて</h3>
+                <div class="mdc-card profile-content mdc-elevation-2">
+                    <div class="profile-image">
+                        <img src="./assets/profile.png" alt="代表：ラジオ太郎" class="profile-img mdc-elevation-1">
+                    </div>
+                    <div class="profile-text">
+                        <h4>代表: 斎藤　友平</h4>
+                        <p>1989年生まれ。新潟大学で建築を学んだ後、設計事務所・ガス会社（都市ガス・LPガス両方）などに勤務。地方の空き家問題に関心を持ち、本業である生活サービス業と並行して活動中。「建物を壊さず、物語を引き継ぐ」をモットーに活動中。
+                        </p>
+                        <p>住まいのなんでも対応を始め、時間があればDIYで空き家を再生。フットワークの軽さとレスポンスの速さが強みです。</p>
+                        <div class="chip-container">
+                            <span class="mdc-chip">二級建築士</span>
+                            <span class="mdc-chip">甲種ガス主任技術者</span>
+                            <span class="mdc-chip">液化石油ガス設備士</span>
+                            <span class="mdc-chip">給水装置工事主任技術者</span>
+                            <span class="mdc-chip">第二種電気工事士</span>
+                            <span class="mdc-chip">乙種第４類危険物取扱者</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせフォーム -->
+        <section id="contact" class="section fade-in">
+            <div class="container">
+                <h2 class="section-subtitle">Contact</h2>
+                <h3 class="section-title">お便り・ご相談</h3>
+                <p class="text-center margin-bottom-lg">ラジオ番組へのお便りのように、お気軽にご相談ください。</p>
+
+                <form id="contact-form" class="mdc-card contact-form mdc-elevation-2">
+                    <!-- Web3Forms動作用の非表示キー（後ほど、ここにお客様のキーを埋め込みます） -->
+                    <input type="hidden" id="access_key" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="【設計室ラジオ】お問い合わせがありました">
+
+                    <div class="mdc-text-field">
+                        <input type="text" id="name" name="name" class="mdc-text-field__input" required placeholder=" ">
+                        <label for="name" class="mdc-text-field__label">お名前</label>
+                    </div>
+
+                    <div class="mdc-text-field mt-4">
+                        <input type="email" id="email" name="email" class="mdc-text-field__input" required
+                            placeholder=" ">
+                        <label for="email" class="mdc-text-field__label">メールアドレス</label>
+                    </div>
+
+                    <div class="mdc-select mt-4">
+                        <select id="property" name="property" class="mdc-select__input" required>
+                            <option value="" disabled selected></option>
+                            <option value="owned">実家・所有している空き家がある</option>
+                            <option value="looking">これから物件を探したい</option>
+                            <option value="other">その他・相談のみ</option>
+                        </select>
+                        <label for="property" class="mdc-select__label">対象の物件について</label>
+                        <span class="material-symbols-rounded mdc-select__icon">arrow_drop_down</span>
+                    </div>
+
+                    <div class="mdc-text-field mdc-text-field--textarea mt-4">
+                        <textarea id="message" name="message" class="mdc-text-field__input" rows="5" required
+                            placeholder=" "></textarea>
+                        <label for="message" class="mdc-text-field__label">ご相談内容</label>
+                    </div>
+
+                    <div class="text-center btn-container mt-4">
+                        <button type="submit" class="btn btn-primary ripple" id="submit-btn">
+                            <span class="material-symbols-rounded">send</span>
+                            送信する
+                        </button>
+                    </div>
+                    <div id="form-result" style="display:none; text-align:center; padding-top:1rem; font-weight:bold;">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Floating Action Button -->
+        <button class="mdc-fab ripple" id="fab-contact"
+            onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})" aria-label="お問い合わせ">
+            <span class="material-symbols-rounded">mail</span>
+        </button>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="logo">設計室ラジオ</div>
+            <p>&copy; 2024 設計室ラジオ. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 簡易診断モーダル -->
+    <div id="diagnosis-modal" class="modal-overlay">
+        <div class="modal-container mdc-card mdc-elevation-3" id="diagnosis-content">
+            <button class="modal-close ripple" id="close-diagnosis-btn" aria-label="閉じる">
+                <span class="material-symbols-rounded">close</span>
+            </button>
+            <div id="quiz-container" style="transition: opacity 0.2s;">
+                <!-- クイズの内容がJSでここに挿入される -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
