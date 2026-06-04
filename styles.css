@@ -496,6 +496,77 @@ ul { list-style: none; }
   background: #111;
 }
 
+/* --- Note Card --- */
+.note-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  border: 1px solid #e0ddd8;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  color: var(--black);
+}
+.note-card:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-color: var(--accent);
+}
+.note-card-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: #e0ddd8;
+}
+.note-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.note-card:hover .note-card-thumb img { transform: scale(1.03); }
+.note-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.note-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.15rem 0.6rem;
+  border-radius: 2px;
+  width: fit-content;
+}
+.note-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.note-card-excerpt {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.note-card-link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-top: 0.2rem;
+}
+
+@media (min-width: 640px) {
+  .note-card { flex-direction: row; }
+  .note-card-thumb { width: 240px; flex-shrink: 0; aspect-ratio: auto; }
+}
+
 /* --- Roadmap --- */
 .roadmap {
   display: flex;
