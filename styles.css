@@ -1,16 +1,16 @@
 /* ============================================
-   設計室ラジオ — Mobile-first styles
+   アキドウ設計室 — Mobile-first styles
    ============================================ */
 
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --black:   #0d0d0d;
-  --white:   #f8f6f2;
-  --gray:    #888;
-  --light:   #f2f0ec;
-  --accent:  #c8a96e;  /* ラジオの温かみ */
+  --black:   #1c2855;  /* アキドウネイビー */
+  --white:   #f7f4ed;  /* クリーム白 */
+  --gray:    #7a8199;
+  --light:   #eee9dc;
+  --accent:  #d4b96a;  /* アキドウゴールド */
   --radius:  4px;
   --font:    'Noto Sans JP', sans-serif;
   --header-h: 60px;
@@ -40,17 +40,21 @@ ul { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  background: rgba(13,13,13,0.95);
+  background: rgba(28,40,85,0.97);
   backdrop-filter: blur(8px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .logo {
-  font-size: 1.1rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
   color: var(--white);
-  letter-spacing: 0.05em;
+}
+.logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 
 .nav {
@@ -112,7 +116,7 @@ ul { list-style: none; }
   width: min(280px, 85vw);
   height: 100dvh;
   height: 100vh; /* fallback */
-  background: #1a1a1a;
+  background: #1c2855;
   z-index: 999;
   padding: calc(var(--header-h) + 1.5rem) 1.8rem 2rem;
   gap: 0;
@@ -296,7 +300,7 @@ ul { list-style: none; }
 .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.4); }
 .btn-outline:hover { background: rgba(255,255,255,0.1); }
 .btn-dark { background: var(--black); color: var(--white); width: 100%; justify-content: center; padding: 1rem; font-size: 1rem; }
-.btn-dark:hover { background: #222; }
+.btn-dark:hover { background: #263090; }
 
 /* --- About --- */
 .about-grid {
@@ -375,11 +379,11 @@ ul { list-style: none; }
   background: rgba(255,255,255,0.1);
 }
 .service-card {
-  background: #161616;
+  background: #14213d;
   padding: 2.5rem 2rem;
   transition: background 0.2s;
 }
-.service-card:hover { background: #1e1e1e; }
+.service-card:hover { background: #1c2d55; }
 
 .service-num {
   font-size: 0.7rem;
@@ -503,7 +507,7 @@ ul { list-style: none; }
   padding: 0.8rem 1rem;
   font-size: 0.78rem;
   color: rgba(255,255,255,0.4);
-  background: #111;
+  background: #0f1b40;
 }
 
 /* --- Repair Section --- */
@@ -543,7 +547,7 @@ ul { list-style: none; }
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(200,169,110,0.12);
+  background: rgba(212,185,106,0.14);
   display: flex;
   align-items: center;
   justify-content: center;
